@@ -97,7 +97,7 @@ GET api/endlicht
 ```
 
 #### Response
-Returns opening hours, manu and specials as JSON
+Returns opening hours, menu and specials as JSON
 
 >It looks like this:  
 
