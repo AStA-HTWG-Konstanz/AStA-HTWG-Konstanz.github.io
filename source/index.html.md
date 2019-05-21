@@ -34,7 +34,7 @@ GET /api/strandbar
 
 ```json
 {
-"open": true
+"open": "true"
 }
 ```
 It returns either true or false 
@@ -145,6 +145,46 @@ Returns opening hours, manu and specials as JSON
             }
         ]
     }
+}
+```
+
+#Dates
+Documentation of the dates API
+
+####Request
+The backendpath looks like this:
+```
+GET /api/events 
+```
+
+####Response
+Returns the events of the current semester
+
+>The JSON looks like this
+```json
+{
+    "events": [
+        {
+            "title": "Prüfungsanmeldezeitraum Sommersemester 2019",
+            "eventDate": "Mittwoch, 8. Mai bis Mittwoch, 22. Mai 2019"
+        },
+        {
+            "title": "Prüfungszeitraum Sommersemester 2019",
+            "eventDate": "Samstag, 06. Juli bis Mittwoch 31. Juli 2019"
+        },
+        {
+            "title": "Zweiter Prüfungszeitraum Sommersemester 2019",
+            "eventDate": "Montag, 23. September bis Freitag, 4. Oktober 2019"
+        },
+        {
+            "title": "Vorlesungsbeginn",
+            "eventDate": "18. März 2019"
+        },
+        {
+            "title": "Vorlesungsende",
+            "eventDate": "05. Juli 2019"
+        }
+    ]
 }
 ```
 
