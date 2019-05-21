@@ -161,6 +161,7 @@ GET /api/events
 Returns the events of the current semester
 
 >The JSON looks like this
+
 ```json
 {
     "events": [
