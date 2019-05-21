@@ -160,7 +160,7 @@ GET /api/events
 ####Response
 Returns the events of the current semester
 
->The JSON looks like this
+>The JSON looks like this  
 
 ```json
 {
@@ -188,6 +188,7 @@ Returns the events of the current semester
     ]
 }
 ```
+   
 
 # User
 Documentation for the user related APIs.
@@ -257,7 +258,7 @@ Returns the grades of a user as JSON.
       
 ```
 
-lululu
+   
 
 
 ### Lectures
