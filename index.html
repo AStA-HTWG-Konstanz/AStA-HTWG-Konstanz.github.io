@@ -425,8 +425,15 @@ GET /api/events
 POST /api/user/auth
 </code></p>
 <h4 id='response-5'>Response</h4>
-<p>Returns a cookie and the role of a user as JSON.</p>
-<h3 id='grades'>Grades</h3>
+<p>Returns the role of a user as JSON.</p>
+
+<blockquote>
+<p>The JSON looks like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"student"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='grades'>Grades</h3>
 <p>API for the grades of a user</p>
 <h4 id='request-6'>Request</h4>
 <p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
