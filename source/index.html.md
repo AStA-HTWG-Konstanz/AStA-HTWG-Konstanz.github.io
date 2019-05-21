@@ -203,7 +203,17 @@ POST /api/user/auth
 ```
 
 #### Response
-Returns a cookie and the role of a user as JSON.
+Returns the role of a user as JSON.
+
+>The JSON looks like this:
+
+```json
+{
+    "student": true
+}
+```
+
+   
 
 
 
