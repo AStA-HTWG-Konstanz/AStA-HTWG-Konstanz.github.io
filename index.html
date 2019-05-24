@@ -491,110 +491,108 @@ POST /api/user/lectures
 <p>Returns the lectures of the authenticated person as Json.</p>
 
 <blockquote>
-<p>The Lecture JSON looks like this:
-<code>json
-{
-  &quot;lectures&quot;: [
-    {
-      &quot;date&quot;: &quot;6.5.2019&quot;,
-      &quot;lectures&quot;: [
-        {
-          &quot;name&quot;: &quot;Stochastik&quot;,
-          &quot;startTime&quot;: &quot;8:00&quot;,
-          &quot;endTime&quot;: &quot;9:30&quot;,
-          &quot;room&quot;: &quot;O007&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        },
-        {
-          &quot;name&quot;: &quot;Programmiertechnik 1&quot;,
-          &quot;startTime&quot;: &quot;9:45&quot;,
-          &quot;endTime&quot;: &quot;11:15&quot;,
-          &quot;room&quot;: &quot;F033&quot;,
-          &quot;category&quot;: &quot;Übung&quot;
-        }
-      ]
-    },
-    {
-      &quot;date&quot;: &quot;7.5.2019&quot;,
-      &quot;lectures&quot;: [
-        {
-          &quot;name&quot;: &quot;Englisch&quot;,
-          &quot;startTime&quot;: &quot;11:30&quot;,
-          &quot;endTime&quot;: &quot;13:00&quot;,
-          &quot;room&quot;: &quot;C109&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        }
-      ]
-    },
-    {
-      &quot;date&quot;: &quot;8.5.2019&quot;,
-      &quot;lectures&quot;: [
-        {
-          &quot;name&quot;: &quot;Systemsoftware&quot;,
-          &quot;startTime&quot;: &quot;8:00&quot;,
-          &quot;endTime&quot;: &quot;9:30&quot;,
-          &quot;room&quot;: &quot;O108&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        },
-        {
-          &quot;name&quot;: &quot;Rechnerarchitektur&quot;,
-          &quot;startTime&quot;: &quot;9:45&quot;,
-          &quot;endTime&quot;: &quot;11:15&quot;,
-          &quot;room&quot;: &quot;O303&quot;,
-          &quot;category&quot;: &quot;Übung&quot;
-        },
-        {
-          &quot;name&quot;: &quot;Rechnerarchitektur&quot;,
-          &quot;startTime&quot;: &quot;11:30&quot;,
-          &quot;endTime&quot;: &quot;13:00&quot;,
-          &quot;room&quot;: &quot;O303&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        }
-      ]
-    },
-    {
-      &quot;date&quot;: &quot;9.5.2019&quot;,
-      &quot;lectures&quot;: [
-        {
-          &quot;name&quot;: &quot;Stochastik&quot;,
-          &quot;startTime&quot;: &quot;14:00&quot;,
-          &quot;endTime&quot;: &quot;15:30&quot;,
-          &quot;room&quot;: &quot;F023&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        },
-        {
-          &quot;name&quot;: &quot;Programmiertechnik 1&quot;,
-          &quot;startTime&quot;: &quot;9:45&quot;,
-          &quot;endTime&quot;: &quot;11:15&quot;,
-          &quot;room&quot;: &quot;F033&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        }
-      ]
-    },
-    {
-      &quot;date&quot;: &quot;10.5.2019&quot;,
-      &quot;lectures&quot;: [
-        {
-          &quot;name&quot;: &quot;Englisch&quot;,
-          &quot;startTime&quot;: &quot;15:45&quot;,
-          &quot;endTime&quot;: &quot;17:15&quot;,
-          &quot;room&quot;: &quot;C109&quot;,
-          &quot;category&quot;: &quot;Übung&quot;
-        },
-        {
-          &quot;name&quot;: &quot;Programmiertechnik 1&quot;,
-          &quot;startTime&quot;: &quot;9:45&quot;,
-          &quot;endTime&quot;: &quot;11:15&quot;,
-          &quot;room&quot;: &quot;F033&quot;,
-          &quot;category&quot;: &quot;Vorlesung&quot;
-        }
-      ]
-    }
-  ]
-}
-</code></p>
+<p>The Lecture JSON looks like this:</p>
 </blockquote>
-<h4 id='response-8'>Response</h4>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"lectures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.5.2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lectures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stochastik"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9:30"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O007"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programmiertechnik 1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9:45"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11:15"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F033"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Übung"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.5.2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lectures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Englisch"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11:30"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C109"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8.5.2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lectures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Systemsoftware"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9:30"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O108"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rechnerarchitektur"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9:45"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11:15"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O303"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Übung"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rechnerarchitektur"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11:30"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"O303"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.5.2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lectures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stochastik"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15:30"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F023"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programmiertechnik 1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9:45"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11:15"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F033"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.5.2019"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lectures"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Englisch"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15:45"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17:15"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C109"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Übung"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Programmiertechnik 1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9:45"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11:15"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"room"</span><span class="p">:</span><span class="w"> </span><span class="s2">"F033"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vorlesung"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h4 id='response-8'>Response</h4>
 <p>Returns the lectures of a user as JSON.</p>
 <h3 id='balance'>Balance</h3>
 <p>Printer balance API</p>
