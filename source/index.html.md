@@ -205,7 +205,7 @@ POST /api/user/auth
 #### Response
 Returns the role of a user as JSON.
 
->The JSON looks like this:
+>The authentication json looks like this:
 
 ```json
 {
@@ -279,6 +279,114 @@ For a successful request a user has to be authenticated. The backend path looks 
 POST /api/user/lectures
 ```
 
+#### Response
+Returns the lectures of the authenticated person as Json.
+
+
+>The Lecture JSON looks like this:
+````json
+{
+  "lectures": [
+    {
+      "date": "6.5.2019",
+      "lectures": [
+        {
+          "name": "Stochastik",
+          "startTime": "8:00",
+          "endTime": "9:30",
+          "room": "O007",
+          "category": "Vorlesung"
+        },
+        {
+          "name": "Programmiertechnik 1",
+          "startTime": "9:45",
+          "endTime": "11:15",
+          "room": "F033",
+          "category": "Übung"
+        }
+      ]
+    },
+    {
+      "date": "7.5.2019",
+      "lectures": [
+        {
+          "name": "Englisch",
+          "startTime": "11:30",
+          "endTime": "13:00",
+          "room": "C109",
+          "category": "Vorlesung"
+        }
+      ]
+    },
+    {
+      "date": "8.5.2019",
+      "lectures": [
+        {
+          "name": "Systemsoftware",
+          "startTime": "8:00",
+          "endTime": "9:30",
+          "room": "O108",
+          "category": "Vorlesung"
+        },
+        {
+          "name": "Rechnerarchitektur",
+          "startTime": "9:45",
+          "endTime": "11:15",
+          "room": "O303",
+          "category": "Übung"
+        },
+        {
+          "name": "Rechnerarchitektur",
+          "startTime": "11:30",
+          "endTime": "13:00",
+          "room": "O303",
+          "category": "Vorlesung"
+        }
+      ]
+    },
+    {
+      "date": "9.5.2019",
+      "lectures": [
+        {
+          "name": "Stochastik",
+          "startTime": "14:00",
+          "endTime": "15:30",
+          "room": "F023",
+          "category": "Vorlesung"
+        },
+        {
+          "name": "Programmiertechnik 1",
+          "startTime": "9:45",
+          "endTime": "11:15",
+          "room": "F033",
+          "category": "Vorlesung"
+        }
+      ]
+    },
+    {
+      "date": "10.5.2019",
+      "lectures": [
+        {
+          "name": "Englisch",
+          "startTime": "15:45",
+          "endTime": "17:15",
+          "room": "C109",
+          "category": "Übung"
+        },
+        {
+          "name": "Programmiertechnik 1",
+          "startTime": "9:45",
+          "endTime": "11:15",
+          "room": "F033",
+          "category": "Vorlesung"
+        }
+      ]
+    }
+  ]
+}
+````
+   
+
 
 #### Response
 Returns the lectures of a user as JSON.
@@ -295,7 +403,7 @@ POST/api/user/balance
 #### Response
 Returns the printer balance of a user as json
 
->It looks like this:
+>The balance JSON looks like this:
 
 ```json
 {
