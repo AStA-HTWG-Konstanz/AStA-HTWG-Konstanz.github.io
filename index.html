@@ -428,7 +428,7 @@ POST /api/user/auth
 <p>Returns the role of a user as JSON.</p>
 
 <blockquote>
-<p>The JSON looks like this:</p>
+<p>The authentication json looks like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"student"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
@@ -488,6 +488,113 @@ POST /api/user/grades
 POST /api/user/lectures
 </code></p>
 <h4 id='response-7'>Response</h4>
+<p>Returns the lectures of the authenticated person as Json.</p>
+
+<blockquote>
+<p>The Lecture JSON looks like this:
+<code>json
+{
+  &quot;lectures&quot;: [
+    {
+      &quot;date&quot;: &quot;6.5.2019&quot;,
+      &quot;lectures&quot;: [
+        {
+          &quot;name&quot;: &quot;Stochastik&quot;,
+          &quot;startTime&quot;: &quot;8:00&quot;,
+          &quot;endTime&quot;: &quot;9:30&quot;,
+          &quot;room&quot;: &quot;O007&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Programmiertechnik 1&quot;,
+          &quot;startTime&quot;: &quot;9:45&quot;,
+          &quot;endTime&quot;: &quot;11:15&quot;,
+          &quot;room&quot;: &quot;F033&quot;,
+          &quot;category&quot;: &quot;Übung&quot;
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;7.5.2019&quot;,
+      &quot;lectures&quot;: [
+        {
+          &quot;name&quot;: &quot;Englisch&quot;,
+          &quot;startTime&quot;: &quot;11:30&quot;,
+          &quot;endTime&quot;: &quot;13:00&quot;,
+          &quot;room&quot;: &quot;C109&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;8.5.2019&quot;,
+      &quot;lectures&quot;: [
+        {
+          &quot;name&quot;: &quot;Systemsoftware&quot;,
+          &quot;startTime&quot;: &quot;8:00&quot;,
+          &quot;endTime&quot;: &quot;9:30&quot;,
+          &quot;room&quot;: &quot;O108&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Rechnerarchitektur&quot;,
+          &quot;startTime&quot;: &quot;9:45&quot;,
+          &quot;endTime&quot;: &quot;11:15&quot;,
+          &quot;room&quot;: &quot;O303&quot;,
+          &quot;category&quot;: &quot;Übung&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Rechnerarchitektur&quot;,
+          &quot;startTime&quot;: &quot;11:30&quot;,
+          &quot;endTime&quot;: &quot;13:00&quot;,
+          &quot;room&quot;: &quot;O303&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;9.5.2019&quot;,
+      &quot;lectures&quot;: [
+        {
+          &quot;name&quot;: &quot;Stochastik&quot;,
+          &quot;startTime&quot;: &quot;14:00&quot;,
+          &quot;endTime&quot;: &quot;15:30&quot;,
+          &quot;room&quot;: &quot;F023&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Programmiertechnik 1&quot;,
+          &quot;startTime&quot;: &quot;9:45&quot;,
+          &quot;endTime&quot;: &quot;11:15&quot;,
+          &quot;room&quot;: &quot;F033&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: &quot;10.5.2019&quot;,
+      &quot;lectures&quot;: [
+        {
+          &quot;name&quot;: &quot;Englisch&quot;,
+          &quot;startTime&quot;: &quot;15:45&quot;,
+          &quot;endTime&quot;: &quot;17:15&quot;,
+          &quot;room&quot;: &quot;C109&quot;,
+          &quot;category&quot;: &quot;Übung&quot;
+        },
+        {
+          &quot;name&quot;: &quot;Programmiertechnik 1&quot;,
+          &quot;startTime&quot;: &quot;9:45&quot;,
+          &quot;endTime&quot;: &quot;11:15&quot;,
+          &quot;room&quot;: &quot;F033&quot;,
+          &quot;category&quot;: &quot;Vorlesung&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></p>
+</blockquote>
+<h4 id='response-8'>Response</h4>
 <p>Returns the lectures of a user as JSON.</p>
 <h3 id='balance'>Balance</h3>
 <p>Printer balance API</p>
@@ -496,11 +603,11 @@ POST /api/user/lectures
 <code>
 POST/api/user/balance
 </code></p>
-<h4 id='response-8'>Response</h4>
+<h4 id='response-9'>Response</h4>
 <p>Returns the printer balance of a user as json</p>
 
 <blockquote>
-<p>It looks like this:</p>
+<p>The balance JSON looks like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
