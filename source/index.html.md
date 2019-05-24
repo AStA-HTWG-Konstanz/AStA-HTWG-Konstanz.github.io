@@ -285,6 +285,8 @@ Returns the lectures of the authenticated person as Json.
 
 
 >The Lecture JSON looks like this:
+
+
 ````json
 {
   "lectures": [
