@@ -207,6 +207,7 @@ Returns the role of a user as JSON.
 
 >The authentication json looks like this:
 
+
 ```json
 {
     "student": true
