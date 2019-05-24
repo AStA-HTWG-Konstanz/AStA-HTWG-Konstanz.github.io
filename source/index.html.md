@@ -42,19 +42,6 @@ It returns either true or false
 
 # Canteen
 
-Documentation of the Canteen API.
-
-#### Request 
-For a successful request a user has to be authenticated. The backend path looks like this:  
-```
-GET /api/canteen/{language}/menu
-```
-
-
-language has to be replace with **de** for german or **en** for english menu.
-
-#### Response
-Returns the menu of the current day and the following five days.
 
 >The request returns the menu as JSON:
 
@@ -85,6 +72,21 @@ Returns the menu of the current day and the following five days.
   ]
  }
 ```
+
+
+Documentation of the Canteen API.
+
+#### Request 
+For a successful request a user has to be authenticated. The backend path looks like this:  
+```
+GET /api/canteen/{language}/menu
+```
+
+
+language has to be replace with **de** for german or **en** for english menu.
+
+#### Response
+Returns the menu of the current day and the following five days.
 
 
 # Endlicht
