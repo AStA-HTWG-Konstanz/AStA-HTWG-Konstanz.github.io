@@ -21,6 +21,13 @@ The backend can be found <a href='https://github.com/AStA-HTWG-Konstanz/backend'
 # Strandbar
 Documentation of the Strandbar API. 
 
+> The request returns if the Strandbar is open as JSON:
+
+```json
+{
+"open": "true"
+}
+```
 
 #### Request
 For a successful request a user has to be authenticated. The backend path looks like this:  
@@ -30,13 +37,7 @@ GET /api/strandbar
 
 #### Response
 
-> The request returns if the Strandbar is open as JSON:
 
-```json
-{
-"open": "true"
-}
-```
 It returns either true or false 
 
 # Canteen
