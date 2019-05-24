@@ -267,32 +267,21 @@
 The backend can be found <a href='https://github.com/AStA-HTWG-Konstanz/backend'>here</a></p>
 <h1 id='strandbar'>Strandbar</h1>
 <p>Documentation of the Strandbar API. </p>
-<h4 id='request'>Request</h4>
-<p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
-<code>
-GET /api/strandbar
-</code></p>
-<h4 id='response'>Response</h4>
+
 <blockquote>
 <p>The request returns if the Strandbar is open as JSON:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
 </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>It returns either true or false </p>
-<h1 id='canteen'>Canteen</h1>
-<p>Documentation of the Canteen API.</p>
-<h4 id='request-2'>Request</h4>
+</span></code></pre><h4 id='request'>Request</h4>
 <p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
 <code>
-GET /api/canteen/{language}/menu
+GET /api/strandbar
 </code></p>
-
-<p>language has to be replace with <strong>de</strong> for german or <strong>en</strong> for english menu.</p>
-<h4 id='response-2'>Response</h4>
-<p>Returns the menu of the current day and the following five days.</p>
-
+<h4 id='response'>Response</h4>
+<p>It returns either true or false </p>
+<h1 id='canteen'>Canteen</h1>
 <blockquote>
 <p>The request returns the menu as JSON:</p>
 </blockquote>
@@ -321,16 +310,18 @@ GET /api/canteen/{language}/menu
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
  </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='endlicht'>Endlicht</h1>
-<p>Documentation for the Endlicht API.</p>
-<h4 id='request-3'>Request</h4>
+</span></code></pre>
+<p>Documentation of the Canteen API.</p>
+<h4 id='request-2'>Request</h4>
 <p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
 <code>
-GET api/endlicht
+GET /api/canteen/{language}/menu
 </code></p>
-<h4 id='response-3'>Response</h4>
-<p>Returns opening hours, menu and specials as JSON</p>
 
+<p>language has to be replace with <strong>de</strong> for german or <strong>en</strong> for english menu.</p>
+<h4 id='response-2'>Response</h4>
+<p>Returns the menu of the current day and the following five days.</p>
+<h1 id='endlicht'>Endlicht</h1>
 <blockquote>
 <p>It looks like this:  </p>
 </blockquote>
@@ -378,16 +369,16 @@ GET api/endlicht
         </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='dates'>Dates</h1>
-<p>Documentation of the dates API</p>
-<h4 id='request-4'>Request</h4>
-<p>The backendpath looks like this:
+</span></code></pre>
+<p>Documentation for the Endlicht API.</p>
+<h4 id='request-3'>Request</h4>
+<p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
 <code>
-GET /api/events 
+GET api/endlicht
 </code></p>
-<h4 id='response-4'>Response</h4>
-<p>Returns the events of the current semester</p>
-
+<h4 id='response-3'>Response</h4>
+<p>Returns opening hours, menu and specials as JSON</p>
+<h1 id='dates'>Dates</h1>
 <blockquote>
 <p>The JSON looks like this  </p>
 </blockquote>
@@ -415,9 +406,25 @@ GET /api/events
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='user'>User</h1>
+</span></code></pre>
+<p>Documentation of the dates API</p>
+<h4 id='request-4'>Request</h4>
+<p>The backendpath looks like this:
+<code>
+GET /api/events 
+</code></p>
+<h4 id='response-4'>Response</h4>
+<p>Returns the events of the current semester</p>
+<h1 id='user'>User</h1>
 <p>Documentation for the user related APIs.</p>
 <h3 id='authentication'>Authentication</h3>
+<blockquote>
+<p>The authentication json looks like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"student"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <p>Authentication API</p>
 <h4 id='request-5'>Request</h4>
 <p>The backend path looks like this:<br>
@@ -426,23 +433,7 @@ POST /api/user/auth
 </code></p>
 <h4 id='response-5'>Response</h4>
 <p>Returns the role of a user as JSON.</p>
-
-<blockquote>
-<p>The authentication json looks like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"student"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='grades'>Grades</h3>
-<p>API for the grades of a user</p>
-<h4 id='request-6'>Request</h4>
-<p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
-<code>
-POST /api/user/grades
-</code></p>
-<h4 id='response-6'>Response</h4>
-<p>Returns the grades of a user as JSON.</p>
-
+<h3 id='grades'>Grades</h3>
 <blockquote>
 <p>The Grades JSON looks like this:</p>
 </blockquote>
@@ -480,16 +471,16 @@ POST /api/user/grades
        </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='lectures'>Lectures</h3>
-<p>API for the lectures of a user</p>
-<h4 id='request-7'>Request</h4>
+</span></code></pre>
+<p>API for the grades of a user</p>
+<h4 id='request-6'>Request</h4>
 <p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
 <code>
-POST /api/user/lectures
+POST /api/user/grades
 </code></p>
-<h4 id='response-7'>Response</h4>
-<p>Returns the lectures of the authenticated person as Json.</p>
-
+<h4 id='response-6'>Response</h4>
+<p>Returns the grades of a user as JSON.</p>
+<h3 id='lectures'>Lectures</h3>
 <blockquote>
 <p>The Lecture JSON looks like this:</p>
 </blockquote>
@@ -592,18 +583,18 @@ POST /api/user/lectures
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h4 id='response-8'>Response</h4>
-<p>Returns the lectures of a user as JSON.</p>
-<h3 id='balance'>Balance</h3>
-<p>Printer balance API</p>
-<h4 id='request-8'>Request</h4>
+</span></code></pre>
+<p>API for the lectures of a user</p>
+<h4 id='request-7'>Request</h4>
 <p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
 <code>
-POST/api/user/balance
+POST /api/user/lectures
 </code></p>
-<h4 id='response-9'>Response</h4>
-<p>Returns the printer balance of a user as json</p>
-
+<h4 id='response-7'>Response</h4>
+<p>Returns the lectures of the authenticated person as Json.</p>
+<h4 id='response-8'>Response</h4>
+<p>Returns the lectures of a user as JSON.</p>
+<h3 id='balance'>Balance</h3>
 <blockquote>
 <p>The balance JSON looks like this:</p>
 </blockquote>
@@ -612,7 +603,16 @@ POST/api/user/balance
     </span><span class="s2">"print"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10,00"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h1 id='errors'>Errors</h1>
+</span></code></pre>
+<p>Printer balance API</p>
+<h4 id='request-8'>Request</h4>
+<p>For a successful request a user has to be authenticated. The backend path looks like this:<br>
+<code>
+POST/api/user/balance
+</code></p>
+<h4 id='response-9'>Response</h4>
+<p>Returns the printer balance of a user as json</p>
+<h1 id='errors'>Errors</h1>
 <p>The HTWG Campus API uses the following error codes:</p>
 
 <table><thead>
