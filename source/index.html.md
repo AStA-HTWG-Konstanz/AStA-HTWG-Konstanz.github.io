@@ -230,7 +230,7 @@ POST /api/user/grades
 Returns the grades of a user as JSON.
 
 >The Grades JSON looks like this:
-
+  
 
 ```json
 {
@@ -269,7 +269,7 @@ Returns the grades of a user as JSON.
       
 ```
 
-   
+  
 
 
 ### Lectures
