@@ -91,17 +91,6 @@ Returns the menu of the current day and the following five days.
 
 # Endlicht
 
-Documentation for the Endlicht API.
-
-#### Request
-For a successful request a user has to be authenticated. The backend path looks like this:  
-```
-GET api/endlicht
-```
-
-#### Response
-Returns opening hours, menu and specials as JSON
-
 >It looks like this:  
 
 ```json
@@ -151,17 +140,22 @@ Returns opening hours, menu and specials as JSON
 }
 ```
 
+
+
+Documentation for the Endlicht API.
+
+#### Request
+For a successful request a user has to be authenticated. The backend path looks like this:  
+```
+GET api/endlicht
+```
+
+#### Response
+Returns opening hours, menu and specials as JSON
+
+
+
 #Dates
-Documentation of the dates API
-
-####Request
-The backendpath looks like this:
-```
-GET /api/events 
-```
-
-####Response
-Returns the events of the current semester
 
 >The JSON looks like this  
 
@@ -191,12 +185,34 @@ Returns the events of the current semester
     ]
 }
 ```
+
+Documentation of the dates API
+
+####Request
+The backendpath looks like this:
+```
+GET /api/events 
+```
+
+####Response
+Returns the events of the current semester
+
+
    
 
 # User
 Documentation for the user related APIs.
 
 ### Authentication
+
+>The authentication json looks like this:
+
+```json
+{
+    "student": true
+}
+```
+
 Authentication API
 
 #### Request
@@ -208,30 +224,16 @@ POST /api/user/auth
 #### Response
 Returns the role of a user as JSON.
 
->The authentication json looks like this:
 
 
-```json
-{
-    "student": true
-}
-```
+
+
 
    
 
 
 
 ### Grades
-API for the grades of a user
-#### Request
-For a successful request a user has to be authenticated. The backend path looks like this:  
-```
-POST /api/user/grades
-```
-#### Response
-
-Returns the grades of a user as JSON.
-
 >The Grades JSON looks like this:
   
 
@@ -272,20 +274,22 @@ Returns the grades of a user as JSON.
       
 ```
 
+API for the grades of a user
+#### Request
+For a successful request a user has to be authenticated. The backend path looks like this:  
+```
+POST /api/user/grades
+```
+#### Response
+
+Returns the grades of a user as JSON.
+
+
+
   
 
 
 ### Lectures
-API for the lectures of a user
-#### Request
-For a successful request a user has to be authenticated. The backend path looks like this:  
-```
-POST /api/user/lectures
-```
-
-#### Response
-Returns the lectures of the authenticated person as Json.
-
 
 >The Lecture JSON looks like this:
 
@@ -391,6 +395,19 @@ Returns the lectures of the authenticated person as Json.
   ]
 }
 ````
+
+API for the lectures of a user
+#### Request
+For a successful request a user has to be authenticated. The backend path looks like this:  
+```
+POST /api/user/lectures
+```
+
+#### Response
+Returns the lectures of the authenticated person as Json.
+
+
+
    
 
 
@@ -398,6 +415,18 @@ Returns the lectures of the authenticated person as Json.
 Returns the lectures of a user as JSON.
 
 ### Balance
+>The balance JSON looks like this:
+
+```json
+{
+  "balance": {
+    "print": "10,00"
+  }
+}
+```
+
+
+
 Printer balance API
 
 #### Request
@@ -408,16 +437,6 @@ POST/api/user/balance
 
 #### Response
 Returns the printer balance of a user as json
-
->The balance JSON looks like this:
-
-```json
-{
-  "balance": {
-    "print": "10,00"
-  }
-}
-```
 
 
 
