@@ -409,11 +409,6 @@ Returns the lectures of the authenticated person as Json.
 
 
    
-
-
-#### Response
-Returns the lectures of a user as JSON.
-
 ### Balance
 >The balance JSON looks like this:
 
