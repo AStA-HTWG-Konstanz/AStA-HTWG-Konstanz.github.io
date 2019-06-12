@@ -239,39 +239,92 @@ Returns the role of a user as JSON.
 
 ```json
 {
-  "Wintersemester 16/17": [
-      {
-          "course": "AIN",
-          "name": "Mathematik 1 und Konsolidierung",
-          "grade": "2",
-          "ects": "10",
-          "passed": true,
-          "bachelor": true,
-          "master": false
-      },
-      {
-          "course": "AIN",
-          "name": "Mathematik 1 Übungen",
-          "grade": "0",
-          "ects": "0",
-          "passed": true,
-          "bachelor": true,
-          "master": false
-      }
-    ],
-      "Sommersemester 17": [
-          {
-              "course": "AIN",
-              "name": "Bachelorzwischenprüfung",
-              "grade": "2,1",
-              "ects": "60",
-              "passed": true,
-              "bachelor": true,
-              "master": false
-          }
-       ]
+    "grades": [
+        {
+            "semesterIdentifier": "Wintersemester 16/17",
+            "semesterPerformance": [
+                {
+                    "course": "AIN",
+                    "name": "Mathematik 1 und Konsolidierung",
+                    "grade": 2,
+                    "ects": 10,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                },
+                {
+                    "course": "AIN",
+                    "name": "Mathematik 1 Übungen",
+                    "grade": 0,
+                    "ects": 0,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                },
+                {
+                    "course": "AIN",
+                    "name": "Konsolidierung",
+                    "grade": 0,
+                    "ects": 0,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                },
+                {
+                    "course": "AIN",
+                    "name": "Digitaltechnik",
+                    "grade": 1.7,
+                    "ects": 8,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                }
+            ]
+        },
+        {
+            "semesterIdentifier": "Sommersemester 17",
+            "semesterPerformance": [
+                {
+                    "course": "AIN",
+                    "name": "Bachelorzwischenprüfung",
+                    "grade": 2.1,
+                    "ects": 60,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                },
+                {
+                    "course": "AIN",
+                    "name": "Softwaremodellierung",
+                    "grade": 3,
+                    "ects": 7,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                },
+                {
+                    "course": "AIN",
+                    "name": "Systemmodellierung Übungen",
+                    "grade": 0,
+                    "ects": 0,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                },
+                {
+                    "course": "AIN",
+                    "name": "Mathematik 2 und Stochastik",
+                    "grade": 1.7,
+                    "ects": 8,
+                    "passed": true,
+                    "bachelor": true,
+                    "master": false
+                }
+            ]
+        }
+    ]
 }
-      
+
 ```
 
 API for the grades of a user
@@ -294,107 +347,62 @@ Returns the grades of a user as JSON.
 >The Lecture JSON looks like this:
 
 
-````json
+```json
 {
-  "lectures": [
-    {
-      "date": "6.5.2019",
-      "lectures": [
+    "lectures": [
         {
-          "name": "Stochastik",
-          "startTime": "8:00",
-          "endTime": "9:30",
-          "room": "O007",
-          "category": "Vorlesung"
+            "date": "2019-6-3",
+            "lectures": [
+                {
+                    "name": "AIN SE5 IT-Sicherheit",
+                    "startTime": "09:45:00",
+                    "endTime": "11:15:00",
+                    "room": "O - 002",
+                    "category": "Einzelveranstaltung"
+                }
+            ]
         },
         {
-          "name": "Programmiertechnik 1",
-          "startTime": "9:45",
-          "endTime": "11:15",
-          "room": "F033",
-          "category": "Übung"
-        }
-      ]
-    },
-    {
-      "date": "7.5.2019",
-      "lectures": [
-        {
-          "name": "Englisch",
-          "startTime": "11:30",
-          "endTime": "13:00",
-          "room": "C109",
-          "category": "Vorlesung"
-        }
-      ]
-    },
-    {
-      "date": "8.5.2019",
-      "lectures": [
-        {
-          "name": "Systemsoftware",
-          "startTime": "8:00",
-          "endTime": "9:30",
-          "room": "O108",
-          "category": "Vorlesung"
+            "date": "2019-6-5",
+            "lectures": [
+                {
+                    "name": "AIN SE4 Software-Archtekturen",
+                    "startTime": "08:00:00",
+                    "endTime": "09:30:00",
+                    "room": "F - 033",
+                    "category": "Vorlesung/Übung"
+                },
+                {
+                    "name": "AIN SE4 Software-Archtekturen",
+                    "startTime": "09:45:00",
+                    "endTime": "11:15:00",
+                    "room": "F - 033",
+                    "category": "Vorlesung/Übung"
+                }
+            ]
         },
         {
-          "name": "Rechnerarchitektur",
-          "startTime": "9:45",
-          "endTime": "11:15",
-          "room": "O303",
-          "category": "Übung"
-        },
-        {
-          "name": "Rechnerarchitektur",
-          "startTime": "11:30",
-          "endTime": "13:00",
-          "room": "O303",
-          "category": "Vorlesung"
+            "date": "2019-6-6",
+            "lectures": [
+                {
+                    "name": "AIN SE5 IT-Sicherheit",
+                    "startTime": "08:00:00",
+                    "endTime": "09:30:00",
+                    "room": "O - 008",
+                    "category": "Einzelveranstaltung"
+                },
+                {
+                    "name": "AIN SE5 IT-Sicherheit",
+                    "startTime": "08:00:00",
+                    "endTime": "09:30:00",
+                    "room": "F - 223",
+                    "category": "Einzelveranstaltung"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "date": "9.5.2019",
-      "lectures": [
-        {
-          "name": "Stochastik",
-          "startTime": "14:00",
-          "endTime": "15:30",
-          "room": "F023",
-          "category": "Vorlesung"
-        },
-        {
-          "name": "Programmiertechnik 1",
-          "startTime": "9:45",
-          "endTime": "11:15",
-          "room": "F033",
-          "category": "Vorlesung"
-        }
-      ]
-    },
-    {
-      "date": "10.5.2019",
-      "lectures": [
-        {
-          "name": "Englisch",
-          "startTime": "15:45",
-          "endTime": "17:15",
-          "room": "C109",
-          "category": "Übung"
-        },
-        {
-          "name": "Programmiertechnik 1",
-          "startTime": "9:45",
-          "endTime": "11:15",
-          "room": "F033",
-          "category": "Vorlesung"
-        }
-      ]
-    }
-  ]
+    ]
 }
-````
+```
 
 API for the lectures of a user
 #### Request
