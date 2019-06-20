@@ -95,48 +95,61 @@ Returns the menu of the current day and the following five days.
 
 ```json
 {
-    "endlicht": {
-        "openingHours": {
-            "2019-04-22": {
-                "startTime": "09:30",
-                "endTime": "16:00"
-            },
-            "2019-04-23": {
-                "startTime": "09:30",
-                "endTime": "16:00"
-            },
-            "2019-04-24": {
-                "startTime": "09:30",
-                "endTime": "16:00"
-            },
-            "2019-04-25": {
-                "startTime": "09:30",
-                "endTime": "16:00"
-            },
-            "2019-04-26": {
-                "startTime": "09:30",
-                "endTime": "14:00"
-            }
-        },
-        "special": {
-            "name": "Eiskaffee",
-            "price": "1.50"
-        },
-        "beverages": [
-            {
-                "name": "Café Creme",
-                "price": "1.00"
-            },
-            {
-                "name": "Espresso",
-                "price": "0.80"
-            },
-            {
-                "name": "Cola",
-                "price": "1.20"
-            }
-        ]
-    }
+    "endlicht": [
+        {
+            "openingHours": [
+                {
+                    "date": "17-06-2019",
+                    "startTime": "09:30",
+                    "endTime": "16:00"
+                },
+                {
+                    "date": "18-06-2019",
+                    "startTime": "09:30",
+                    "endTime": "16:00"
+                },
+                {
+                    "date": "19-06-2019",
+                    "startTime": "0",
+                    "endTime": "0"
+                },
+                {
+                    "date": "20-06-2019",
+                    "startTime": "09:30",
+                    "endTime": "16:00"
+                },
+                {
+                    "date": "21-06-2019",
+                    "startTime": "09:30",
+                    "endTime": "14:00"
+                }
+            ],
+            "specials": [
+                {
+                    "name": "Affogato al Café",
+                    "price": "1,50"
+                },
+                {
+                    "name": "Eisschoki",
+                    "price": "1,50"
+                }
+            ],
+            "beverages": [
+                {
+                    "name": "Cafe",
+                    "price": "1,00"
+                },
+                {
+                    "name": "Tee",
+                    "price": "0,50"
+                },
+                {
+                    "name": "Heiße Schoki",
+                    "price": "1,00"
+                }
+            ]
+        }
+    ]
 }
 ```
 
