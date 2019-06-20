@@ -164,7 +164,7 @@ GET api/endlicht
 ```
 
 #### Response
-Returns opening hours, menu and specials as JSON
+Returns opening hours, menu and specials as JSON. If the Endlicht is closed startTime and EndTime are **0**.
 
 
 
