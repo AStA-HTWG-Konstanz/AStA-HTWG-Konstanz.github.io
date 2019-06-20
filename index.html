@@ -326,48 +326,61 @@ GET /api/canteen/{language}/menu
 <p>It looks like this:  </p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"endlicht"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"openingHours"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"2019-04-22"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"2019-04-23"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"2019-04-24"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"2019-04-25"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="s2">"2019-04-26"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14:00"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"special"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eiskaffee"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.50"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"beverages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Café Creme"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.00"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Espresso"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.80"</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cola"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.20"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"endlicht"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"openingHours"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17-06-2019"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18-06-2019"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19-06-2019"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-06-2019"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16:00"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21-06-2019"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"startTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:30"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"endTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14:00"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"specials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Affogato al Café"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,50"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eisschoki"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,50"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"beverages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cafe"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,00"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tee"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,50"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Heiße Schoki"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,00"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Documentation for the Endlicht API.</p>
