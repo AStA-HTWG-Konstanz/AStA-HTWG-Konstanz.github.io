@@ -346,6 +346,10 @@ For a successful request a user has to be authenticated. The backend path looks 
 ```
 POST /api/user/grades
 ```
+Parameters are:  
+username
+password
+token
 #### Response
 
 Returns the grades of a user as JSON.
@@ -448,12 +452,26 @@ Printer balance API
 #### Request
 For a successful request a user has to be authenticated. The backend path looks like this:  
 ```
-POST/api/user/balance
+POST /api/user/balance
 ```
 
 #### Response
 Returns the printer balance of a user as json
 
+
+# Feedback
+
+### User Feedback
+
+#### Request  
+For a successful request the user has to be authenticated. The backend path looks like this:  
+```
+POST /api/feedback/userfeedback
+```
+It requires category(String) & message(String) as parameter. OS and device are optional parameters
+
+#### Response
+If the request is successful OK is returned. Otherwise an error will be returned
 
 
 
