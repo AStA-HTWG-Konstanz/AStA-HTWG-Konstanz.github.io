@@ -464,10 +464,10 @@ Returns the printer balance of a user as json
 ### User Feedback
 
 #### Request  
-For a successful request the user has to be authenticated. The backend path looks like this:  
+For a successful request the user has to be authenticated. The backend path looks like this:    
 ```
-POST /api/feedback/userfeedback
-```
+POST /api/feedback/userfeedback  
+```  
 It requires category(String) & message(String) as parameter. OS and device are optional parameters
 
 #### Response
